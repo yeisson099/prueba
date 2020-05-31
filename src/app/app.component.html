@@ -1,7 +1,23 @@
-<nav class="navbar navbar-dark bg-primary">
-    <a href="/" class="navbar-brand">
-    Prueba angular
-  </a>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Crud Rest Api</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/employee">Empleados</a>
+            </li>
+
+        </ul>
+    </div>
 </nav>
 
-<app-employee></app-employee>
+<router-outlet></router-outlet>
