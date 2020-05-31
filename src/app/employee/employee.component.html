@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-8">
+            <table class="table table-responsive">
+                <thead>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Salario</th>
+                    <th>Edad</th>
+                    <th>Foto</th>
+                    <th class="text-center">Opciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of employees">
+                        <td>{{ item.id}}</td>
+                        <td>{{ item.employee_name}}</td>
+                        <td>{{ item.employee_salary}}</td>
+                        <td>{{ item.employee_age}}</td>
+                        <td>{{ item.employee_image}}</td>
+                        <td>
+                            <button (click)="delete(item.id)" class="btn btn-primary mr-2">Eliminar</button>
+                            <button (click)="updateEmployee(item.id)" class="btn btn-secondary">Actuaizar</button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-4">
+            <h3>Registro de datos</h3>
+            <div class="form-group">
+                <label for="nameControl">Nombre</label>
+                <input type="text" [(ngModel)]="createEmployee.name" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="nameControl">Salario</label>
+                <input type="text" [(ngModel)]="createEmployee.salary" class="form-control" placeholder="Salario">
+            </div>
+            <div class="form-group">
+                <label for="nameControl">Edad</label>
+                <input type="text" [(ngModel)]="createEmployee.age" class="form-control" placeholder="Edad">
+            </div>
+
+            <button (click)="create()" class="btn btn-primary">Insertar</button>
+        </div>
+    </div>
+</div>
